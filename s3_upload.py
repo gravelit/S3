@@ -78,9 +78,5 @@ coloredlogs.install(level='INFO')
 # Main
 # ----------------------------------------------------------------------------------
 if __name__ == '__main__':
-    try:
-        api = S3Api()
-        api.upload_files()
-    except:
-        logger.error('Failed to upload file to S3')
-        pass
+    api = S3Api()
+    api.upload_files()
